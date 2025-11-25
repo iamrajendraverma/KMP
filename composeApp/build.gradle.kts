@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.moko.resources)
 }
 
 kotlin {
@@ -41,9 +42,10 @@ kotlin {
             implementation(libs.androidx.lifecycle.runtimeCompose)
         }
         iosMain.dependencies {
-            implementation(compose.uiTooling) // Example path, may vary slightly depending on your setup
+          //  implementation(compose.uiTooling) // Example path, may vary slightly depending on your setup
             // Alternatively, if you manage dependencies manually:
-            implementation("org.jetbrains.compose.ui:ui-graphics")
+            implementation(libs.bundles.moko.resources.set)
+
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

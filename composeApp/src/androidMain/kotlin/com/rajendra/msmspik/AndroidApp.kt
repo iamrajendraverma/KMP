@@ -29,12 +29,8 @@ class AndroidApp : Application() {
             versionName = BuildConfig.VERSION_NAME,
             version = BuildConfig.VERSION_CODE.toString()
         )
-        val drawable = getDrawable(R.drawable.ic_launcher_background)
-        val bitmap = (drawable as? BitmapDrawable)?.bitmap
-        val appDrawable =
-            bitmap?.asImageBitmap()?.let { AppDrawable(appLogo = BitmapPainter(image = it)) }
         val appLocalization = AppLocalization(displayName = getString(R.string.display_name))
-        androidAppConfig = AndroidAppConfig(data, appLocalization, appDrawable)
+        androidAppConfig = AndroidAppConfig(data, appLocalization)
 
     }
 }

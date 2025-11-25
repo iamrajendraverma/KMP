@@ -1,5 +1,6 @@
 package com.rajendra.msmspik
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,7 +19,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.rajendra.msmspik.platform.getDrawable
 import com.rajendra.msmspik.platform.getPlatform
+import com.rajendra.msmspik.platform.getThemColor
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 
@@ -69,6 +72,26 @@ fun PListDisplay() {
 
             DataItem(label = "Display name ", value = localizationString.displayName)
 
+            Text(
+                text = "Platform Drawable",
+                style = MaterialTheme.typography.headlineSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            Divider(Modifier.padding(vertical = 8.dp))
+            Image(getDrawable().appLogo, "App Logo")
+
+            Text(
+                text = "Platform Color ",
+                style = MaterialTheme.typography.headlineSmall,
+                color = MaterialTheme.colorScheme.primary,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            Divider(Modifier.padding(vertical = 8.dp))
+
+            DataItem(label = "Primary Color ", value = localizationString.displayName, color = getThemColor().primary?:MaterialTheme.colorScheme.onSurface)
+            DataItem(label = "Secondary Color ", value = localizationString.displayName, color = getThemColor().secondary?:MaterialTheme.colorScheme.onSurface)
+            DataItem(label = "Accent Color ", value = localizationString.displayName, color = getThemColor().accent?:MaterialTheme.colorScheme.onSurface)
 
         }
     }
@@ -78,7 +101,7 @@ fun PListDisplay() {
  * Helper Composable to format a single configuration item (Label and Value).
  */
 @Composable
-fun DataItem(label: String, value: String, isPrimary: Boolean = false) {
+fun DataItem(label: String, value: String, isPrimary: Boolean = false,color:Color = MaterialTheme.colorScheme.onSurface) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
@@ -95,7 +118,7 @@ fun DataItem(label: String, value: String, isPrimary: Boolean = false) {
         Text(
             text = value,
             style = MaterialTheme.typography.bodyLarge,
-            color = if (isPrimary) MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface,
+            color = if (isPrimary) MaterialTheme.colorScheme.error else color,
             fontWeight = if (isPrimary) FontWeight.Bold else FontWeight.Medium
         )
     }
