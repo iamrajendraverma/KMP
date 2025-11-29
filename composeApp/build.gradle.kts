@@ -73,6 +73,10 @@ android {
         getByName("release") {
             isMinifyEnabled = false
         }
+        getByName("debug") {
+            isMinifyEnabled = false
+            applicationIdSuffix = ".dev"
+        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
@@ -80,6 +84,16 @@ android {
     }
     buildFeatures {
         buildConfig =true
+    }
+
+    flavorDimensions("tenant")
+    productFlavors {
+        create("JEWELLERY") {
+            applicationId = "com.rajendra.jewellery.MSMSpik"
+            buildConfigField("String", "O_AUTH_BUTTON_TEXT", "\"Login Using ACCA\"")
+            versionName = "1.0.0"
+            versionCode = 1
+        }
     }
 }
 

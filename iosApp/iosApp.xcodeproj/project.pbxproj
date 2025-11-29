@@ -11,15 +11,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B11545E2EDAFF87007A9070 /* jewellery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jewellery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA9CD922ED5C97D00B3F6A7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		49D89877B218BB5130ACC298 /* MSMSpik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSMSpik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellery" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Assets.xcassets,
+				Info.plist,
+				"Preview Content/Preview Assets.xcassets",
+			);
+			target = 0B1154552EDAFF87007A9070 /* jewellery */;
+		};
 		38EDEC09E3BE88B53E75F199 /* Exceptions for "iosApp" folder in "iosApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				targets/jewellry/Localizable.xcstrings,
 			);
 			target = CFF53C3AAFF655A9A85ED455 /* iosApp */;
 		};
@@ -35,6 +46,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				38EDEC09E3BE88B53E75F199 /* Exceptions for "iosApp" folder in "iosApp" target */,
+				0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellery" target */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -42,6 +54,13 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B1154582EDAFF87007A9070 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		87B86CA7AB7460A5EEABCF56 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -61,11 +80,13 @@
 				EE7FD7AF608CF5D481BE674B /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		EE7FD7AF608CF5D481BE674B /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				49D89877B218BB5130ACC298 /* MSMSpik.app */,
+				0B11545E2EDAFF87007A9070 /* jewellery.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +94,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0B1154552EDAFF87007A9070 /* jewellery */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellery" */;
+			buildPhases = (
+				0B1154562EDAFF87007A9070 /* Compile Kotlin Framework */,
+				0B1154572EDAFF87007A9070 /* Sources */,
+				0B1154582EDAFF87007A9070 /* Frameworks */,
+				0B1154592EDAFF87007A9070 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				D537D1048CB48B833AB431DF /* iosApp */,
+			);
+			name = jewellery;
+			packageProductDependencies = (
+			);
+			productName = iosApp;
+			productReference = 0B11545E2EDAFF87007A9070 /* jewellery.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CFF53C3AAFF655A9A85ED455 /* iosApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 665959AD93824B00F8FAEF52 /* Build configuration list for PBXNativeTarget "iosApp" */;
@@ -126,11 +170,19 @@
 			projectRoot = "";
 			targets = (
 				CFF53C3AAFF655A9A85ED455 /* iosApp */,
+				0B1154552EDAFF87007A9070 /* jewellery */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B1154592EDAFF87007A9070 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1E02E2FAF9F47F32BA6199AB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +194,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0B1154562EDAFF87007A9070 /* Compile Kotlin Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Compile Kotlin Framework";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"YES\" = \"$OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED\" ]; then\n  echo \"Skipping Gradle build task invocation due to OVERRIDE_KOTLIN_BUILD_IDE_SUPPORTED environment variable set to \\\"YES\\\"\"\n  exit 0\nfi\ncd \"$SRCROOT/..\"\n./gradlew :composeApp:embedAndSignAppleFrameworkForXcode\n";
+		};
 		B044BA5EFCEF6264EF48205B /* Compile Kotlin Framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -164,6 +235,13 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B1154572EDAFF87007A9070 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BD9833533A4BC56E6E60C58D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -174,6 +252,68 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0B11545C2EDAFF87007A9070 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				O_AUTH_BUTTON_TEXT = "Login with Jewellry";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jewellery.MSMSpik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0B11545D2EDAFF87007A9070 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"iosApp/Preview Content\"";
+				DEVELOPMENT_TEAM = "${TEAM_ID}";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = iosApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				O_AUTH_BUTTON_TEXT = "Login with Jewellry";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jewellery.MSMSpik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		136FA91912288D6990EE9887 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReferenceAnchor = 3FC26D3CAE0B7A266B091329 /* Configuration */;
@@ -358,6 +498,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellery" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B11545C2EDAFF87007A9070 /* Debug */,
+				0B11545D2EDAFF87007A9070 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		665959AD93824B00F8FAEF52 /* Build configuration list for PBXNativeTarget "iosApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
