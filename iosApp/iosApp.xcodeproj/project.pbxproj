@@ -11,20 +11,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B11545E2EDAFF87007A9070 /* jewellry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jewellry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B11545E2EDAFF87007A9070 /* jewellery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jewellery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BA9CD922ED5C97D00B3F6A7 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		49D89877B218BB5130ACC298 /* MSMSpik.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MSMSpik.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellry" target */ = {
+		0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellery" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Assets.xcassets,
 				Info.plist,
 				"Preview Content/Preview Assets.xcassets",
 			);
-			target = 0B1154552EDAFF87007A9070 /* jewellry */;
+			target = 0B1154552EDAFF87007A9070 /* jewellery */;
 		};
 		38EDEC09E3BE88B53E75F199 /* Exceptions for "iosApp" folder in "iosApp" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -46,7 +46,7 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				38EDEC09E3BE88B53E75F199 /* Exceptions for "iosApp" folder in "iosApp" target */,
-				0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellry" target */,
+				0B11545F2EDAFF88007A9070 /* Exceptions for "iosApp" folder in "jewellery" target */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				49D89877B218BB5130ACC298 /* MSMSpik.app */,
-				0B11545E2EDAFF87007A9070 /* jewellry.app */,
+				0B11545E2EDAFF87007A9070 /* jewellery.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -94,9 +94,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B1154552EDAFF87007A9070 /* jewellry */ = {
+		0B1154552EDAFF87007A9070 /* jewellery */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellry" */;
+			buildConfigurationList = 0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellery" */;
 			buildPhases = (
 				0B1154562EDAFF87007A9070 /* Compile Kotlin Framework */,
 				0B1154572EDAFF87007A9070 /* Sources */,
@@ -110,11 +110,11 @@
 			fileSystemSynchronizedGroups = (
 				D537D1048CB48B833AB431DF /* iosApp */,
 			);
-			name = jewellry;
+			name = jewellery;
 			packageProductDependencies = (
 			);
 			productName = iosApp;
-			productReference = 0B11545E2EDAFF87007A9070 /* jewellry.app */;
+			productReference = 0B11545E2EDAFF87007A9070 /* jewellery.app */;
 			productType = "com.apple.product-type.application";
 		};
 		CFF53C3AAFF655A9A85ED455 /* iosApp */ = {
@@ -170,7 +170,7 @@
 			projectRoot = "";
 			targets = (
 				CFF53C3AAFF655A9A85ED455 /* iosApp */,
-				0B1154552EDAFF87007A9070 /* jewellry */,
+				0B1154552EDAFF87007A9070 /* jewellery */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +275,7 @@
 					"@executable_path/Frameworks",
 				);
 				O_AUTH_BUTTON_TEXT = "Login with Jewellry";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jwellry.MSMSpik;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jewellery.MSMSpik;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -306,7 +306,8 @@
 					"@executable_path/Frameworks",
 				);
 				O_AUTH_BUTTON_TEXT = "Login with Jewellry";
-				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jwellry.MSMSpik;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rajendra.jewellery.MSMSpik;
+
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -498,7 +499,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellry" */ = {
+		0B11545B2EDAFF87007A9070 /* Build configuration list for PBXNativeTarget "jewellery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0B11545C2EDAFF87007A9070 /* Debug */,
